@@ -21,6 +21,8 @@ This analysis focused on three main questions:
 
 • Do shorter policy terms lapse more often than longer ones
 
+
+
 ## Loading the life insurance data(kaggle) into R
 ```{r}
 install.packages("tidyverse")
@@ -51,7 +53,17 @@ anyNA(life_insurance_unique)
 colSums(is.na(life_insurance_unique))   ## show  column names with count of missing values(missing values in benefits and premiums)
 ```
 
+## The entry age to sign up to a life insurance policy is 18 years or more . so i removed ages less than 18 years from “life_insurance_unique” data set . 
+```{r}
+life_insurance_unique <- life_insurance_unique %>% filter(`ENTRY AGE` >= 18)
+```
 
-## luckily premiums and benefits will not be used in this analysis , hence we will take them  out 
+
+## Premiums and benefits contains missing values in the data .  Both  will  not be needed in this analysis  , hence we will take them  out 
+```{r}
+life_insurance_reduced <- subset(life_insurance_unique, select = -c(BENEFIT, Premium))
+```
+
+
 
 
