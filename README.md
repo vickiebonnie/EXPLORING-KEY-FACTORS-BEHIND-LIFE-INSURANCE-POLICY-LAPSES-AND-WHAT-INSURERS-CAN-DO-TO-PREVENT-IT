@@ -8,7 +8,7 @@ It happens . And it’s surprisingly common with life insurance.
 This project investigates why so many people let their life insurance policies lapse and what insurers can do to reduce it. Using a real dataset and exploratory data analysis in R, I identified key trends and proposed data-driven, real-world solutions
 
 
-#Business Context
+# Business Context
 
 Life insurance is a safety net but when people stop paying their premiums, both they and the insurer lose out.
 
