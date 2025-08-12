@@ -161,6 +161,107 @@ ggplot(lapse_rate_by_age, aes(x = age_group, y = lapse_rate, fill = age_group)) 
   theme(legend.position = "none")
 ```
 
+# key question 2(lapse rate by payment frequency)
+## Grouped Policy Terms: Binned policy_term into “Short (≤ 5 yrs)” vs. “Long (> 5 yrs)
+
+```{r}
+lapse_rate_by_freq <- life_insurance_lapse %>%
+  group_by(payment_frequency, `policy status` ) %>%
+  summarise(count = n(), .groups = "drop") %>%
+  group_by(payment_frequency) %>%
+  mutate(
+    total      = sum(count),
+    lapse_rate = round(count / total * 100, 1)
+  ) %>%
+  filter(`policy status`== "Lapsed")  # only need the Lapsed rows
+
+```
+# visualizing(lapse rate by payment frequency)
+```{r}
+ggplot(lapse_rate_by_freq, aes(x = payment_frequency, y = lapse_rate, fill = payment_frequency)) +
+  geom_col() +
+  geom_text(
+    aes(label = paste0(lapse_rate, "%")), vjust = -0.5, size = 4) +  # Labels on top of bars
+  scale_fill_manual(values = c(
+    "Monthly"         = "indianred1",
+    "Quaterly"       = "sandybrown"  ,
+    "Annually"        = "mediumturquoise",
+    "Semiannually"    = "deepskyblue2",
+    "Single Premium"  = "mediumpurple3" 
+  )) +
+  scale_x_discrete(labels = c(
+    "Monthly"         = "Monthly",
+    "Quarterly"       = "Quarterly",
+    "Annually"        = "Annually",
+    "Semiannually"    = "Semi-\nAnnually",
+    "Single Premium"  = "Single\nPremium"
+  )) +
+  labs(
+    title = "Lapse Rate by Payment Frequency",
+    x     = "Payment Frequency",
+    y     = "Lapse Rate (%)"
+  ) +
+  ylim(0, max(lapse_rate_by_freq$lapse_rate) + 20) +
+  theme_minimal(base_size = 14) +
+  theme(
+    legend.position = "none",
+    axis.text.x     = element_text(angle = 45, hjust = 1)
+  )
+```
+
+# key question 3(Lapse Rate by Policy Term)
+
+
+```{r}
+life_insurance_term <- life_insurance_lapse %>%
+  mutate(
+    term_group = if_else(             ### grouping to <=5 & >5year term
+      policy_term <= 5,
+      "Short (≤5 yrs)",
+      "Long (>5 yrs)"
+    )
+  )
+  
+ term_counts <- life_insurance_term %>%
+  group_by(term_group, `policy status`) %>%
+  summarise(count = n(), .groups = "drop")     ## Count policies by term_group and lapses
+  
+  
+  lapse_rate_by_term <- term_counts %>%         ## Calculating total policies per term_group and compute lapse rate 
+  group_by(term_group) %>%
+  mutate(
+    total      = sum(count),                  # total policies in each term_group
+    lapse_rate = round(count / total * 100, 1)  # % that are lapsed
+  ) %>%
+  filter(`policy status` == "Lapsed")       # focus on lapse rates only
+
+```
+
+## Visualizing term_group by lapse_group
+```{r}
+ggplot(lapse_rate_by_term, aes(x = term_group, y = lapse_rate, fill = term_group)) +
+  geom_col() +
+  geom_text(
+    aes(label = paste0(lapse_rate,"%")),
+    vjust = -0.8, 
+    size = 4
+  ) +             
+  scale_fill_manual(values = c(
+    "Short (≤5 yrs)" = "indianred1",
+    "Long (>5 yrs)"  = "sandybrown"
+  )) +
+  labs(
+    title = "Lapse Rate by Policy Term",
+    x     = "Policy Term",
+    y     = "Lapse Rate (%)"
+  ) +
+  ylim(0, max(lapse_rate_by_term$lapse_rate) + 8) + 
+  theme_minimal(base_size = 14) +
+  theme(legend.position = "none")
+```
+
+
+
 
 
  
