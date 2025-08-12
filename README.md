@@ -7,7 +7,8 @@ It happens . And it’s surprisingly common with life insurance.
 
 This project investigates why so many people let their life insurance policies lapse and what insurers can do to reduce it. Using a real dataset and exploratory data analysis in R, I identified key trends and proposed data-driven, real-world solutions
 
-#️ Business Context
+
+#Business Context
 
 Life insurance is a safety net but when people stop paying their premiums, both they and the insurer lose out.
 
@@ -59,10 +60,67 @@ life_insurance_unique <- life_insurance_unique %>% filter(`ENTRY AGE` >= 18)
 ```
 
 
-## Premiums and benefits contains missing values in the data .  Both  will  not be needed in this analysis  , hence we will take them  out 
+## Drop columns we won’t analyze (BENEFIT, Premium)
 ```{r}
 life_insurance_reduced <- subset(life_insurance_unique, select = -c(BENEFIT, Premium))
 ```
+
+
+## Rename columns for clarity
+```{r}
+library(dplyr)
+life_insurance_reduced <- life_insurance_reduced %>%
+  rename(
+    age =`ENTRY AGE`,
+    payment_frequency = `PAYMENT MODE`,
+    policy_term =`Policy Year`)
+```
+## Keep a clean dataset for further processing
+```{r}
+life_insurance_rename = life_insurance_reduced
+```
+
+Why? Grouping continuous variables like age into categories
+# makes trends easier to interpret for business decisions
+```{r}
+life_insurance_rename <- life_insurance_rename %>%
+  mutate(age_group = cut(age,
+                         breaks = c(18, 30, 50, Inf),
+                         labels = c("18–30", "31–50", "51+")))
+```
+
+## Renaming columnames to lowercase
+```{r}
+names(life_insurance_rename) <- tolower(names(life_insurance_rename))
+```
+
+## Check summary for ages 
+```{r}
+summary(life_insurance_rename$age_group)   ## there are missing values from the checks 
+```
+
+## Remove rows with missing age group
+```{r}
+life_insurance_clean <- life_insurance_rename%>%
+  
+  filter(!is.na(age) & age >= 18 & age <= 100) %>%
+ 
+  mutate(age_group = cut(
+    age,
+    breaks = c(17, 30, 50,Inf),
+    labels = c("18–30", "31–50", "51+")
+  ))
+```
+## Lapse Status is the total of 
+
+
+
+  
+
+
+
+
+
 
 
 
