@@ -111,7 +111,60 @@ life_insurance_clean <- life_insurance_rename%>%
     labels = c("18–30", "31–50", "51+")
   ))
 ```
-## Lapse Status is the total of 
+
+## Policy status in  this  data is the combination of “Lapse”, “Surrender”, “Expired” ,"Death" and "Inforce".
+To calculate for lapse, we need to calculate for a lapse variable 
+```{r}
+life_insurance_lapse <- life_insurance_clean %>%
+  filter(`policy status` != "Death") %>%               
+  mutate(`policy status` = case_when(
+    `policy status`%in% c("Lapse", "Surrender", "Expired") ~ "Lapsed",
+    `policy status` == "Inforce" ~ "Active",
+    TRUE ~ "Other"
+  ))                ## Grouped  “Lapse”, “Surrender”, “Expired” to Lapsed and  “Inforce” to  Active
+```
+# Key Question 1(Lapse Rate by Age Group)
+
+## calculating lapse_by_age
+```{r}
+lapse_by_age <- life_insurance_lapse %>%
+  group_by(age_group, `policy status`) %>%
+  summarise(count = n(), .groups = "drop")
+  ```
+## Calculate lapse rate by age group
+```{r}
+lapse_rate_by_age <- lapse_by_age %>%
+  group_by(age_group) %>%
+  mutate(
+    total = sum(count),
+    lapse_rate = round((count / total) * 100, 1)
+  ) %>%
+  filter( `policy status` == "Lapsed")  # keep only lapse rate rows
+  ```
+## Visualizing lapse rate by age group
+```{r}
+ggplot(lapse_rate_by_age, aes(x = age_group, y = lapse_rate, fill = age_group)) +
+  geom_col() +
+  geom_text(
+    aes(label = paste0(round(lapse_rate, 1), "%")),
+    vjust = -0.3, 
+    size = 4
+  ) +
+  scale_fill_manual(values = c("indianred1",  "sandybrown", "mediumturquoise")) +
+  labs(
+    title = "Lapse Rate by Age Group",
+    x = "Age Group", 
+    y = "Lapse Rate (%)"
+  ) +
+  ylim(0, max(lapse_rate_by_age$lapse_rate, na.rm = TRUE) + 10) +  # Add 10% headroom
+  theme_minimal(base_size = 14) +
+  theme(legend.position = "none")
+```
+
+
+
+ 
+  
 
 
 
