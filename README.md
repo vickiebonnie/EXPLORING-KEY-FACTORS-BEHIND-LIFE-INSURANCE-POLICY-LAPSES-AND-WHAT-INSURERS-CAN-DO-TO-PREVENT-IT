@@ -35,7 +35,7 @@ life_insurance_data <-read_csv("life insurance data.csv")
 glimpse(life_insurance_data)          ## View column types and samples     
 ```
 
-##Checking for duplicate and removing duplicate
+## Checking  and removing duplicate
 ```{r}
 any(duplicated(life_insurance_data))  ## check for duplicate
 sum(duplicated(life_insurance_data))  ## gives the total number of duplicates in the data 
