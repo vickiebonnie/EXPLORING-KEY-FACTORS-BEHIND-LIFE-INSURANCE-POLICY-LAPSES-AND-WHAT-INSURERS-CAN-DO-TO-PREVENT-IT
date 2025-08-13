@@ -76,7 +76,7 @@ Source: Life Insurance Dataset Kaggle[(https://www.kaggle.com/datasets/balgdrum/
 Below are the main insights uncovered during the analysis, accompanied by visualizations generated in
 
 
-        ###  AGE GROUP VS LAPSE RATE
+              ###  AGE GROUP VS LAPSE RATE
         
 <img width="511" height="271" alt="Image" src="https://github.com/user-attachments/assets/37a8ffd7-725a-4980-a9a3-48e3357b6a92" />
 
@@ -84,6 +84,17 @@ Below are the main insights uncovered during the analysis, accompanied by visual
 
 •	Older people(50+) are more likely to keep their policies
 
+
+             ### LAPSE RATE (%) ACROSS PAYMENT FREQUENCY
+
+<img width="511" height="271" alt="Image" src="https://github.com/user-attachments/assets/00f3913a-1ac5-47fc-b4cf-5dc866a21440" />
+
+
+
+
+• Policies paid all at once or once a year are more likely to stay active.
+
+• Those with monthly or quarterly payments are more likely to stop paying their premiums.
 
 
 
