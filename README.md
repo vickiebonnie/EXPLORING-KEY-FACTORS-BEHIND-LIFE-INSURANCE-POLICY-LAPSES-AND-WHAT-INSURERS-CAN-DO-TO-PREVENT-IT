@@ -73,8 +73,19 @@ Source: Life Insurance Dataset Kaggle[(https://www.kaggle.com/datasets/balgdrum/
 
 # 📊 Key Insights
 
-### AGE GROUP VS LAPSE RATE
+Below are the main insights uncovered during the analysis, accompanied by visualizations generated in
+
+
+        ###  AGE GROUP VS LAPSE RATE
+        
 <img width="511" height="271" alt="Image" src="https://github.com/user-attachments/assets/37a8ffd7-725a-4980-a9a3-48e3357b6a92" />
+
+•	Younger people(ages 18-30)are more likely to stop paying premiums on their policies over a period.
+
+•	Older people(50+) are more likely to keep their policies
+
+
+
 
 
 
