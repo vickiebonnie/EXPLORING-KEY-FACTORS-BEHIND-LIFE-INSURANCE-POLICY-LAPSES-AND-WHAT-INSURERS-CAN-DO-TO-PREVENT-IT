@@ -74,6 +74,7 @@ Source: Life Insurance Dataset Kaggle[(https://www.kaggle.com/datasets/balgdrum/
 # 📊 Key Insights
 
 ### AGE GROUP VS LAPSE RATE
+<img width="511" height="271" alt="Image" src="https://github.com/user-attachments/assets/37a8ffd7-725a-4980-a9a3-48e3357b6a92" />
 
 
 
