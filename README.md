@@ -9,11 +9,15 @@ It happens. And it’s surprisingly common with life insurance.
 This project investigates why so many people let their life insurance policies lapse and what insurers can do to reduce it. Using a real dataset and exploratory data analysis in R, I identified key trends and proposed data-driven, real-world solutions
 
 
-# Business Context
+# 💡 Business Context
 
-Life insurance is a safety net but when people stop paying their premiums, both they and the insurer lose out.
+Life insurance is more than a financial product.it’s a safety net for families.
+When policies lapse:
 
-By understanding which customers are more likely to lapse and why, insurers can design better products and communication strategies to keep people protected and maintain their customer base.
+•	Customers lose critical financial protection.
+
+•	Insurers lose revenue and customer trust.
+
 
 This analysis focused on three main questions:
 
@@ -22,6 +26,36 @@ This analysis focused on three main questions:
 • Does payment frequency influence lapse rates?
 
 • Do shorter policy terms lapse more often than longer ones
+
+# 📂 Dataset & Tools
+
+📄 Data Used
+
+Source: Life Insurance Dataset — Kaggle ([replace with actual link](https://www.kaggle.com/datasets/balgdrum/life-insurance-policy-data)
+
+Size: ~X,XXX policy records
+
+Key Fields:
+
+ENTRY AGE — Age at policy start
+
+PAYMENT MODE — Monthly, Quarterly, Semi-Annual, Annual, Single Premium
+
+Policy Year — Policy term in years
+
+BENEFIT & Premium — Coverage and cost
+
+policy status — Lapse, Surrender, Expired, Death, Inforce
+
+
+
+
+
+
+
+
+
+
 
 
 
