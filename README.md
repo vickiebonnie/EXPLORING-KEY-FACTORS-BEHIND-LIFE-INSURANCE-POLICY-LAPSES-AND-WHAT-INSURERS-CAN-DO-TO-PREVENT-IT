@@ -97,6 +97,13 @@ Below are the main insights uncovered during the analysis, accompanied by visual
 • Those with monthly or quarterly payments are more likely to stop paying their premiums.
 
 
+             ### LAPSE RATES BY POLICY TERM: SHORT-TERM VS LONG-TERM POLICIES
+
+             
+
+
+
+
 
 
 
