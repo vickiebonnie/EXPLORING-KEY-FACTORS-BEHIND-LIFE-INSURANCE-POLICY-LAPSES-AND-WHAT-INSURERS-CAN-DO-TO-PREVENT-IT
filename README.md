@@ -9,7 +9,7 @@ It happens. And it’s surprisingly common with life insurance.
 This project investigates why so many people let their life insurance policies lapse and what insurers can do to reduce it. Using a real dataset and exploratory data analysis in R, I identified key trends and proposed data-driven, real-world solutions
 
 
-# 💡 Business Context
+# 💡Business Context
 
 Life insurance is more than a financial product.it’s a safety net for families.
 When policies lapse:
@@ -19,7 +19,7 @@ When policies lapse:
 •	Insurers lose revenue and customer trust.
 
 
-This analysis focused on three main questions:
+### This analysis focused on three main questions:
 
 • How do lapse rates vary across different age groups?
 
@@ -27,25 +27,65 @@ This analysis focused on three main questions:
 
 • Do shorter policy terms lapse more often than longer ones
 
-# 📂 Dataset & Tools
+
+# 📂Dataset & Tools
 
 📄 Data Used
 
-Source: Life Insurance Dataset — Kaggle ([replace with actual link](https://www.kaggle.com/datasets/balgdrum/life-insurance-policy-data)
+Source: Life Insurance Dataset Kaggle[(https://www.kaggle.com/datasets/balgdrum/life-insurance-policy-data)]
 
-Size: ~X,XXX policy records
+### 📌Key Variables Analyzed 
 
-Key Fields:
+•	Age
 
-ENTRY AGE — Age at policy start
+•	Payment Frequency (monthly, quarterly, semi-annually, annually and single premium)
 
-PAYMENT MODE — Monthly, Quarterly, Semi-Annual, Annual, Single Premium
+•	Policy Term
 
-Policy Year — Policy term in years
+•	Policy Status
 
-BENEFIT & Premium — Coverage and cost
 
-policy status — Lapse, Surrender, Expired, Death, Inforce
+### 🛠Tools Used
+•	Programming Language: R
+
+•	Libraries: tidyverse, dplyr and  ggplot2
+
+•	Techniques: Data cleaning, data transformation, grouping variables, visualization with ggplot
+
+
+### 🧹Data Preparation Process
+
+•	Removed duplicates.
+
+•	Dropped unused columns (BENEFIT, Premium) for this analysis.
+
+•	Filtered out ages below 18 years
+
+### 🔄 Data Transformation 
+
+•	Grouped ENTRY AGE into: 18–30, 31–50, 51+.
+
+•	Grouped Policy Year into: Short (≤ 5 years) and Long (> 5 years)
+
+•	Grouped  “Lapse”, “Surrender”, “Expired” to Lapsed and  “Inforce” to  Active
+
+
+
+# 📊 Key Insights
+
+### AGE GROUP VS LAPSE RATE
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
