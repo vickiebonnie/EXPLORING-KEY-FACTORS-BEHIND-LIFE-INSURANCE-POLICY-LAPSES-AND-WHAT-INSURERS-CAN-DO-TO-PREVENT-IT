@@ -100,32 +100,43 @@ Below are the main insights uncovered during the analysis, accompanied by visual
              ### LAPSE RATES BY POLICY TERM: SHORT-TERM VS LONG-TERM POLICIES
 
              
+<img width="511" height="271" alt="Image" src="https://github.com/user-attachments/assets/d9a41e89-db92-413f-a155-7b317b4c334b" />
+
+
+
+
+•	Policies with shorter terms (≤5 years) have a higher likelihood of lapsing.
+
+•	Longer-term policies are more stable.
+
+
+# ⚠️ LIMITATIONS
+
+Of course, no project is perfect. Mine had limitations:
+
+The dataset didn’t include personal-level details like income, education or employment status. It also didn’t account for premium increments over time.
+
+This means the analysis focused more on general trends than individual financial behavior, something I noted as an area for future research.
 
 
 
 
 
 
+# 💡CONCLUSIONS AND RECOMMENDATIONS
+
+I didn’t just want to stop at the "what." I thought, 'How can this help someone in the real world?'
+
+So I suggested two practical ideas:
+
+👉 A “Resilience Rider” –  a feature that offers up to two years of grace to clients facing financial hardship (such as job loss), provided the policy is active at the time of request. This benefit would come with conditions, including a specified policy value threshold for eligibility. Additionally, if the client requests any benefits during the grace period, the insurer would receive a 20% share of the withdrawn amount.
+
+👉 Loyalty incentives – simple rewards like gift vouchers and health checkups to encourage clients to keep their policies active over time.
+
+By acting on these data-driven insights, insurers can reduce lapses, retain more customers and provide continuous protection creating a win–win for both the company and policyholders
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+         
 
 
 
