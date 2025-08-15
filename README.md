@@ -1,6 +1,14 @@
-# EXPLORING KEY FACTORS BEHIND LIFE INSURANCE POLICY LAPSES AND WHAT INSURERS CAN DO TO PREVENT IT
+# Exploring  Key Factors Behind Life Insurance Policy Lapses and What Insurers Can Do TO Prevent Them
 
-# 📌Project Overview
+## Table Of Content
+- [Project Overview](#projectoverview)
+- [Business Context](#businesscontext)
+- [Dataset And Tools](#datasetandtools)
+- [Data Preparation](#datapreparation)
+- 
+- 
+
+### 📌Project Overview
 
 Have you ever signed up for something important, only to stop halfway because life got in the way?
 
@@ -9,32 +17,32 @@ It happens. And it’s surprisingly common with life insurance.
 This project investigates why so many people let their life insurance policies lapse and what insurers can do to reduce it. Using a real dataset and exploratory data analysis in R, I identified key trends and proposed data-driven, real-world solutions
 
 
-# 💡Business Context
+### 💡Business Context
 
 Life insurance is more than a financial product.it’s a safety net for families.
 When policies lapse:
 
-•	Customers lose critical financial protection.
+- Customers lose critical financial protection.
 
-•	Insurers lose revenue and customer trust.
-
-
-### This analysis focused on three main questions:
-
-• How do lapse rates vary across different age groups?
-
-• Does payment frequency influence lapse rates?
-
-• Do shorter policy terms lapse more often than longer ones
+- Insurers lose revenue and customer trust.
 
 
-# 📂Dataset & Tools
+#### This analysis focused on three main questions:
 
-📄 Data Used
+How do lapse rates vary across different age groups?
 
-Source: Life Insurance Dataset Kaggle[(https://www.kaggle.com/datasets/balgdrum/life-insurance-policy-data)]
+ - Does payment frequency influence lapse rates?
 
-### 📌Key Variables Analyzed 
+-  Do shorter policy terms lapse more often than longer ones
+
+
+### 📂Dataset And Tools
+
+ Data Used
+
+ -Life Insurance Dataset Kaggle[(https://www.kaggle.com/datasets/balgdrum/life-insurance-policy-data)]
+
+Key Variables Analyzed 
 
 •	Age
 
@@ -45,7 +53,7 @@ Source: Life Insurance Dataset Kaggle[(https://www.kaggle.com/datasets/balgdrum/
 •	Policy Status
 
 
-### 🛠Tools Used
+#### 🛠Tools Used
 •	Programming Language: R
 
 •	Libraries: tidyverse, dplyr and  ggplot2
@@ -53,7 +61,7 @@ Source: Life Insurance Dataset Kaggle[(https://www.kaggle.com/datasets/balgdrum/
 •	Techniques: Data cleaning, data transformation, grouping variables, visualization with ggplot
 
 
-### 🧹Data Preparation Process
+### Data Preparation Process
 
 •	Removed duplicates.
 
