@@ -6,7 +6,7 @@
 - [Business Objectives](#businessobjectives)
 - [Dataset And Tools](#datasetandtools)
 - [Methodology](#Methodology)
-- [Key Insights](#keyinsights)
+- [KeyInsights](#keyinsights)
 - [Limitations](#limitations)
 - [Conclusions And Recommendations](#conclusionsandrecommendations)
   
