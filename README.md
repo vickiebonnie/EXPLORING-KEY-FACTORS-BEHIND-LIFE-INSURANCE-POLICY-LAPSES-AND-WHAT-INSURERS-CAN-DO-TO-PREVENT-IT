@@ -3,11 +3,16 @@
 ## Table Of Contents
 - [Project Overview](#projectoverview)
 - [Business Context](#businesscontext)
-- [Business Objectives](#BusinessObjectives)
+- [Business Objectives](#businessobjectives)
 - [Dataset And Tools](#datasetandtools)
-- [Data Preparation](#datapreparation)
-- 
-- 
+- [Methodology](#Methodology)
+- [Key Insights](keyinsights)
+- [Limitations](#limitations)
+- [Conclusions And Recommendations](#conclusionsandrecommendations)
+  
+  
+
+
 
 ### Project Overview
 
@@ -29,12 +34,12 @@ When policies lapse:
 
 #### This analysis focused on three main questions:
 
-How do lapse rates vary across different age groups?
 
- - Does payment frequency influence lapse rates?
+- How do lapse rates vary across different age groups?
 
--  Do shorter policy terms lapse more often than longer ones
-  
+- Does payment frequency influence lapse rates?
+
+- Do shorter policy terms lapse more often than longer ones?
 
 
 ### Business Objectives
@@ -50,48 +55,48 @@ How do lapse rates vary across different age groups?
 
 ### Dataset And Tools
 
- Data Used
+1. Dataset:(Life Insurance Dataset Kaggle[(https://www.kaggle.com/datasets/balgdrum/life-insurance-policy-data)]
 
- -Life Insurance Dataset Kaggle[(https://www.kaggle.com/datasets/balgdrum/life-insurance-policy-data)]
+2. Key Variables Analyzed 
 
-Key Variables Analyzed 
+- Age
 
-•	Age
+- Payment Frequency (monthly, quarterly, semi-annually, annually and single premium)
 
-•	Payment Frequency (monthly, quarterly, semi-annually, annually and single premium)
+- Policy Term
 
-•	Policy Term
-
-•	Policy Status
+- Policy Status
 
 
-#### 🛠Tools Used
-•	Programming Language: R
+3. Tools Used
 
-•	Libraries: tidyverse, dplyr and  ggplot2
+- Programming Language: R
 
-•	Techniques: Data cleaning, data transformation, grouping variables, visualization with ggplot
+- Libraries: tidyverse, dplyr and  ggplot2
+
+- Techniques: Data cleaning, data transformation, grouping variables, visualization with ggplot
+
+### Methodology
+
+1. Data Preparation Process
+
+- Removed duplicates.
+
+-	Dropped unused columns (BENEFIT, Premium) for this analysis.
+
+- Filtered out ages below 18 years
+
+ 2. Data Transformation 
+
+- Grouped ENTRY AGE into: 18–30, 31–50, 51+.
+
+- Grouped Policy Year into: Short (≤ 5 years) and Long (> 5 years)
+
+- Grouped  “Lapse”, “Surrender”, “Expired” to Lapsed and  “Inforce” to  Active
 
 
-### Data Preparation Process
 
-•	Removed duplicates.
-
-•	Dropped unused columns (BENEFIT, Premium) for this analysis.
-
-•	Filtered out ages below 18 years
-
-### 🔄 Data Transformation 
-
-•	Grouped ENTRY AGE into: 18–30, 31–50, 51+.
-
-•	Grouped Policy Year into: Short (≤ 5 years) and Long (> 5 years)
-
-•	Grouped  “Lapse”, “Surrender”, “Expired” to Lapsed and  “Inforce” to  Active
-
-
-
-# 📊 Key Insights
+### Key Insights
 
 Below are the main insights uncovered during the analysis, accompanied by visualizations generated in
 
@@ -100,9 +105,9 @@ Below are the main insights uncovered during the analysis, accompanied by visual
         
 <img width="511" height="271" alt="Image" src="https://github.com/user-attachments/assets/37a8ffd7-725a-4980-a9a3-48e3357b6a92" />
 
-•	Younger people(ages 18-30)are more likely to stop paying premiums on their policies over a period.
+- Younger people(ages 18-30)are more likely to stop paying premiums on their policies over a period.
 
-•	Older people(50+) are more likely to keep their policies
+- Older people(50+) are more likely to keep their policies
 
 
              ### LAPSE RATE (%) ACROSS PAYMENT FREQUENCY
@@ -112,9 +117,9 @@ Below are the main insights uncovered during the analysis, accompanied by visual
 
 
 
-• Policies paid all at once or once a year are more likely to stay active.
+- Policies paid all at once or once a year are more likely to stay active.
 
-• Those with monthly or quarterly payments are more likely to stop paying their premiums.
+- Those with monthly or quarterly payments are more likely to stop paying their premiums.
 
 
              ### LAPSE RATES BY POLICY TERM: SHORT-TERM VS LONG-TERM POLICIES
@@ -125,12 +130,12 @@ Below are the main insights uncovered during the analysis, accompanied by visual
 
 
 
-•	Policies with shorter terms (≤5 years) have a higher likelihood of lapsing.
+- Policies with shorter terms (≤5 years) have a higher likelihood of lapsing.
 
-•	Longer-term policies are more stable.
+- Longer-term policies are more stable.
 
 
-# ⚠️ LIMITATIONS
+### Limitations
 
 Of course, no project is perfect. Mine had limitations:
 
@@ -140,18 +145,15 @@ This means the analysis focused more on general trends than individual financial
 
 
 
-
-
-
-# 💡CONCLUSIONS AND RECOMMENDATIONS
+### Conclusions And Recommendations  
 
 I didn’t just want to stop at the "what." I thought, 'How can this help someone in the real world?'
 
 So I suggested two practical ideas:
 
-👉 A “Resilience Rider” –  a feature that offers up to two years of grace to clients facing financial hardship (such as job loss), provided the policy is active at the time of request. This benefit would come with conditions, including a specified policy value threshold for eligibility. Additionally, if the client requests any benefits during the grace period, the insurer would receive a 20% share of the withdrawn amount.
+- A “Resilience Rider” –  a feature that offers up to two years of grace to clients facing financial hardship (such as job loss), provided the policy is active at the time of request. This benefit would come with conditions, including a specified policy value threshold for eligibility. Additionally, if the client requests any benefits during the grace period, the insurer would receive a 20% share of the withdrawn amount.
 
-👉 Loyalty incentives – simple rewards like gift vouchers and health checkups to encourage clients to keep their policies active over time.
+- Loyalty incentives – simple rewards like gift vouchers and health checkups to encourage clients to keep their policies active over time.
 
 By acting on these data-driven insights, insurers can reduce lapses, retain more customers and provide continuous protection creating a win–win for both the company and policyholders
 
