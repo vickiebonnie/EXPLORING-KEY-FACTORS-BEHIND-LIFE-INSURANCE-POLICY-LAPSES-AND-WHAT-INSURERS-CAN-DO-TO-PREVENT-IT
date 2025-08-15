@@ -1,14 +1,15 @@
 # Exploring  Key Factors Behind Life Insurance Policy Lapses and What Insurers Can Do TO Prevent Them
 
-## Table Of Content
+## Table Of Contents
 - [Project Overview](#projectoverview)
 - [Business Context](#businesscontext)
+- [Business Objectives](#BusinessObjectives)
 - [Dataset And Tools](#datasetandtools)
 - [Data Preparation](#datapreparation)
 - 
 - 
 
-### 📌Project Overview
+### Project Overview
 
 Have you ever signed up for something important, only to stop halfway because life got in the way?
 
@@ -17,15 +18,14 @@ It happens. And it’s surprisingly common with life insurance.
 This project investigates why so many people let their life insurance policies lapse and what insurers can do to reduce it. Using a real dataset and exploratory data analysis in R, I identified key trends and proposed data-driven, real-world solutions
 
 
-### 💡Business Context
+### Business Context
 
-Life insurance is more than a financial product.it’s a safety net for families.
+Life insurance is more than a financial product. It’s a safety net for families.
 When policies lapse:
 
 - Customers lose critical financial protection.
 
 - Insurers lose revenue and customer trust.
-
 
 #### This analysis focused on three main questions:
 
@@ -34,9 +34,21 @@ How do lapse rates vary across different age groups?
  - Does payment frequency influence lapse rates?
 
 -  Do shorter policy terms lapse more often than longer ones
+  
 
 
-### 📂Dataset And Tools
+### Business Objectives
+
+- Identify which age groups are most prone to policy lapses.
+
+- Analyze how payment frequency impacts lapse rates.
+
+- Evaluate whether shorter policy terms lead to higher lapse rates.
+
+- Recommend actions insurers can take to reduce lapse rates.
+
+
+### Dataset And Tools
 
  Data Used
 
