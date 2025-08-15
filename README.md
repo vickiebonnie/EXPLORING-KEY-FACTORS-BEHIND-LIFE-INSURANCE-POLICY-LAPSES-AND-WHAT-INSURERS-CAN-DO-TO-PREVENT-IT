@@ -1,14 +1,14 @@
 # Exploring  Key Factors Behind Life Insurance Policy Lapses and What Insurers Can Do TO Prevent Them
 
 ## Table Of Contents
-- [Project Overview](#projectoverview)
-- [Business Context](#businesscontext)
-- [Business Objectives](#businessobjectives)
-- [Dataset And Tools](#datasetandtools)
+- [Project Overview](#project-overview)
+- [Business Context](#business-context)
+- [Business Objectives](#business-objectives)
+- [Dataset And Tools](#dataset-and-tools)
 - [Methodology](#Methodology)
-- [KeyInsights](#keyinsights)
+- [Key Insights](#key-insights)
 - [Limitations](#limitations)
-- [Conclusions And Recommendations](#conclusionsandrecommendations)
+- [Conclusions And Recommendations](#conclusions-and-recommendations)
   
   
 
