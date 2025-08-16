@@ -9,7 +9,11 @@
 - [Key Insights](#key-insights)
 - [Limitations](#limitations)
 - [Conclusions And Recommendations](#conclusions-and-recommendations)
+
+
   
+  ![an image of black man or woman that demonstrate an life insurance policy has lapsed (1)](https://github.com/user-attachments/assets/0f52195e-0ea6-4873-b3a1-6ac2bec90715)
+
   
 
 
