@@ -166,17 +166,25 @@ By acting on these data-driven insights, insurers can reduce lapses, retain more
          
 
 
+
+
+
 ### Appendix A: Procedures and Code
+For readers who would like to see how the analysis was performed, below are the steps and corresponding R code used in the project.
 
-
+#### Load Libraries and Data 
 
 
 ## Loading the life insurance data(kaggle) into R
 ```{r}
 install.packages("tidyverse")
 library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(readr)
 life_insurance_data <-read_csv("life insurance data.csv")
 ```
+
 ## Inspecting the structure of the data
 ```{r}
 glimpse(life_insurance_data)          ## View column types and samples     
