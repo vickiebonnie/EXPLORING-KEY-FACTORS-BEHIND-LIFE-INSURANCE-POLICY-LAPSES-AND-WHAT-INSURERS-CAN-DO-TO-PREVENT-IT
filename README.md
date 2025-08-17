@@ -1,4 +1,4 @@
-# Exploring  Key Factors Behind Life Insurance Policy Lapses and What Insurers Can Do TO Prevent Them
+# Exploring  Key Factors Behind Life Insurance Policy Lapses and What Insurers Can Do To Prevent Them
 
 ## Table Of Contents
 - [Project Overview](#project-overview)
@@ -9,7 +9,8 @@
 - [Key Insights](#key-insights)
 - [Limitations](#limitations)
 - [Conclusions And Recommendations](#conclusions-and-recommendations)
-
+- [Appendix A: Procedures and Code](appendix-A:-Procedures-and-Code)
+  
 
   
   ![an image of black man or woman that demonstrate an life insurance policy has lapsed (1)](https://github.com/user-attachments/assets/0f52195e-0ea6-4873-b3a1-6ac2bec90715)
@@ -163,6 +164,10 @@ By acting on these data-driven insights, insurers can reduce lapses, retain more
 
 
          
+
+
+### Appendix A: Procedures and Code
+
 
 
 
