@@ -9,7 +9,7 @@
 - [Key Insights](#key-insights)
 - [Limitations](#limitations)
 - [Conclusions And Recommendations](#conclusions-and-recommendations)
-- [Appendix A: Procedures and Code](appendix-a-procedures-and-code)
+- [Rscripts and Procedures](rscripts-and-Procedures)
   
 
   
@@ -169,7 +169,7 @@ By acting on these data-driven insights, insurers can reduce lapses, retain more
 
 
 
-### Appendix A: Procedures and Code
+### Rscripts and Procedures
 For readers who would like to see how the analysis was performed, the steps and corresponding R code used in the project are provided below.
 
 #### 1. Loading  Libraries and the life insurance data(kaggle) into R 
